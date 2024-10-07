@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 opcion1(){
@@ -24,13 +25,32 @@ opcion1(){
 	fi
 }
 opcion2(){
-	echo "Opcion 2 elegida"
-}
+	{
+	echo " --- INFORME --- "
+	echo "Fecha y Hora actual: $(date '+%F %T')"
+	echo ""
+	echo "Uso de CPU:"
+	top -bn1 | grep "Cpu(s)"
+	echo ""
+	echo "Uso de Memoria:"
+	free -h
+	echo ""
 
+	echo "Uso de Disco:"
+	df -h
+	} > reporte.log
+	echo "Reporte creado en 'reporte.log'"
+}
+opcion3(){
+	read -p "Ingrese el nombre del nuevo usuario: " nombre_usuario
+	sudo adduser $nombre_usuario
+	cat /etc/passwd | grep $nombre_usuario
+}
 while true;do
 echo "1) Respaldo de un directorio"
-echo "1) Opcion 2"
-echo "3) Salir"
+echo "2) Generacion de un informe de especificaciones"
+echo "3) Crear un usuario"
+echo "0) Salir"
 read -p "Elige una opcion: " opcion
 
 case $opcion in 
@@ -41,6 +61,9 @@ case $opcion in
 	opcion2
 	;;
 	3)
+	opcion3
+	;;
+	0)
 	break
 	;;
 	*)
