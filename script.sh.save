@@ -1,0 +1,12 @@
+#!/bin/bash
+
+PS3="Elige una opcion: "
+
+select opcion in "Opcion 1" "Opcion 2" "Opcion 3" "Salir"; do
+	case $opcion in
+		"Opcion 1")
+			echo "Has elegido la opcion 1"
+			;;
+	
+	"Opcion 2")
+			

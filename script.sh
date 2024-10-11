@@ -47,10 +47,10 @@ opcion3(){
 	cat /etc/passwd | grep $nombre_usuario
 }
 opcion4(){
-
+echo "Esta es la opcion 4"
 }
 opcion5(){
-
+echo "Esta es la opcion 5"
 }
 
 while true;do
@@ -62,7 +62,7 @@ echo "5) Eliminacion de archivos y cache"
 echo "0) Salir"
 read -p "Elige una opcion: " opcion
 
-case $opcion in 
+case $opcion in
 	1)
 	opcion1
 	;;

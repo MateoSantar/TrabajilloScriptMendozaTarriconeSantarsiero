@@ -1,0 +1,33 @@
+#!/bin/bash
+
+opcion1(){
+	echo "Opcion 1 elegida"
+}
+opcion2(){
+	echo "Opcion 2 elegida"
+}
+
+while true;do
+
+echo "1) Opcion 1"
+echo "2) Opcion 1
+echo "3) Opcion 1"
+echo "4) Opcion 1"
+
+read -p "Elige una opcion: " opcion
+
+case $opcion in 
+	1)
+	opcion1
+	;;
+	2)
+	opcion2
+	;;
+	*)
+	echo "Opcion no valida"
+	;;
+esac
+echo ""
+done
+
+done
