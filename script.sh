@@ -46,10 +46,19 @@ opcion3(){
 	sudo adduser $nombre_usuario
 	cat /etc/passwd | grep $nombre_usuario
 }
+opcion4(){
+
+}
+opcion5(){
+
+}
+
 while true;do
 echo "1) Respaldo de un directorio"
 echo "2) Generacion de un informe de especificaciones"
 echo "3) Crear un usuario"
+echo "4) Actualizar sistema"
+echo "5) Eliminacion de archivos y cache"
 echo "0) Salir"
 read -p "Elige una opcion: " opcion
 
@@ -63,6 +72,12 @@ case $opcion in
 	3)
 	opcion3
 	;;
+ 	4)
+  	opcion4
+   	;;
+    	5)
+     	opcion5
+      	;;
 	0)
 	break
 	;;
