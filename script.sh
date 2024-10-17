@@ -45,8 +45,7 @@ opcion3(){
 	read -p "Ingrese el nombre del nuevo usuario: " nombre_usuario
 	sudo adduser $nombre_usuario
 	cat /etc/passwd | grep $nombre_usuario
-}
-#Esto es un comentario
+}	
 opcion4(){
 echo "Esta es la opcion 4"
 }
