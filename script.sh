@@ -47,10 +47,16 @@ opcion3(){
 	cat /etc/passwd | grep $nombre_usuario
 }	
 opcion4(){
-echo "Esta es la opcion 4"
+echo "Actualizando el Sistema..."
+sudo apt update && sudo apt upgrade -y
+echo "Sistema actualizado corrextamente."
 }
 opcion5(){
-echo "Esta es la opcion 5"
+echo "Eliminando archivos innecesarios y caché..."
+sudo apt autoremove -y
+sudo apt clean
+sudo rm -rf /tmp/*
+echo "Archivos y caché eliminados correctamente."
 }
 
 while true;do
