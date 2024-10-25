@@ -1,4 +1,9 @@
 # Script de Automatización en Bash
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=bash" />
+  </a>
+</p>
 
 Este script en Bash proporciona varias funcionalidades útiles para la gestión del sistema, como respaldo de directorios, generación de informes, creación de usuarios, actualización del sistema y limpieza de archivos innecesarios y caché.
 
