@@ -4,7 +4,7 @@ Este script en Bash proporciona varias funcionalidades útiles para la gestión 
 
 ## Requisitos
 
-Este script está diseñado para ser ejecutado en una distribución de Linux basada en Debian (como Ubuntu). Se recomienda tener privilegios de administrador (root) o usar `sudo` para ejecutar algunas de las funciones.
+Este script está diseñado para ser ejecutado en una distribución de Linux basada en Debian (en este caso RasperryOS). Se recomienda ser superusurio (root) o usar `sudo` para ejecutar algunas de las funciones.
 
 ## Funcionalidades
 
@@ -41,4 +41,7 @@ El script ofrece un menú interactivo que incluye las siguientes opciones:
 
 1. Para ejecutar este script, primero asegúrate de tener permisos de ejecución en el archivo:
    ```bash
-   chmod +x nombre_del_script.sh
+   chmod +x script.sh
+2. Ejecutar el script:
+   ```bash
+   ./script.sh
