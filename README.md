@@ -1,6 +1,6 @@
 # Script de Automatización en Bash
 <p align="left">
-  <a href="https://skillicons.dev">
+  <a href="">
     <img src="https://skillicons.dev/icons?i=bash" />
   </a>
 </p>
