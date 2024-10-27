@@ -178,6 +178,10 @@ Archivos y caché eliminados correctamente.
 
 Tus cambios seran revisados!
 
+## Errores
+
+No se genera el archivo .zip => Comprobar que esta instalado el paquete zip unzip
+
 ## Licencia
 
 Este proyecto está bajo la **MIT License**
