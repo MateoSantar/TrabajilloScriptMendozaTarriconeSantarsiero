@@ -50,6 +50,30 @@ El script ofrece un menú interactivo que incluye las siguientes opciones:
    ```bash
    ./script.sh
 
+## Ejemplo
+
+### Generacion de Infome
+
+>  --- INFORME --- 
+> Fecha y Hora actual: 2024-10-27 14:08:25
+
+> Uso de CPU:
+> %Cpu(s):  0,0 us,  6,2 sy,  0,0 ni, 93,8 id,  0,0 wa,  0,0 hi,  0,0 si,  0,0 st
+
+> Uso de Memoria:
+>                total        used        free      shared  buff/cache   available
+> Mem:           1,9Gi       259Mi       671Mi        25Mi       1,0Gi       1,5Gi
+> Swap:          1,0Gi          0B       1,0Gi
+
+> Uso de Disco:
+> S.ficheros     Tamaño Usados  Disp Uso% Montado en
+> udev             947M      0  947M   0% /dev
+> tmpfs            199M   948K  198M   1% /run
+> /dev/sda1         19G   7,9G  9,8G  45% /
+> tmpfs            992M      0  992M   0% /dev/shm
+> tmpfs            5,0M   4,0K  5,0M   1% /run/lock
+> tmpfs            199M    28K  199M   1% /run/user/1000
+
 ## Contribuciones
 
 ¡Las contribuciones son bienvenidas! Aquí tienes algunas pautas para colaborar en este script:
