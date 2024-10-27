@@ -20,7 +20,6 @@ El script ofrece un menú interactivo que incluye las siguientes opciones:
    - **Detalles**:
      - Si no existe el directorio `respaldos/`, este será creado automáticamente.
      - El respaldo será guardado en la carpeta `respaldos/` con el nombre del directorio seleccionado.
-
 ### 2. **Generación de un informe de especificaciones**
    - **Descripción**: Genera un informe detallado del sistema que incluye la fecha y hora actual, uso de CPU, uso de memoria y uso de disco.
    - **Salida**: El informe se guarda en un archivo llamado `reporte.log`.
@@ -50,3 +49,46 @@ El script ofrece un menú interactivo que incluye las siguientes opciones:
 2. Ejecutar el script:
    ```bash
    ./script.sh
+
+## Contribuciones
+
+¡Las contribuciones son bienvenidas! Aquí tienes algunas pautas para colaborar en este script:
+
+### Cómo Contribuir
+
+1. **Fork del Repositorio**: Haz un fork de este repositorio.
+2. **Crea una Nueva Rama**:
+   ```bash
+   git checkout -b mi-nueva-caracteristica
+3. **Agrega las modificaciones**:
+   ```bash
+   git add .
+5. **Commit a tus cambios**:
+   ```bash
+   git commit -m "Agrega nueva característica"
+6. **Push a tu rama**:
+   ```bash
+   git push origin mi-nueva-caracteristica
+7. **Crea un Pull Request**
+
+Tus cambios seran revisados!
+
+## Licencia
+
+Este proyecto está bajo la **MIT License**
+
+---
+
+MIT License
+
+Copyright (c) [2024] [Santarsiero Mateo, Mendoza Joaquín Pedro, Tarricone Thiago]
+
+Se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia
+de este software,
+para utilizar este software sin restricciones, incluyendo, pero no limitándose a,
+los derechos a usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar
+y/o vender copias del Software, y a permitir que las personas a las que se les
+proporcione el Software lo hagan, bajo las siguientes condiciones:
+
+1. El aviso de copyright anterior y este aviso de permiso se incluirán en todas
+   las copias o partes sustanciales del Software.
