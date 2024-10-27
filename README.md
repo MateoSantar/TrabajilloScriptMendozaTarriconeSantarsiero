@@ -106,6 +106,54 @@ Introduzca el nuevo valor, o pulse INTRO para usar el valor predeterminado
 usuario:x:1001:1001:,,,:/home/usuario:/bin/bash
 ```
 
+### Actualizacion de Sistema
+
+```bash
+Actualizando el Sistema...
+Obj:1 http://deb.debian.org/debian bullseye InRelease
+Obj:2 http://deb.debian.org/debian-security bullseye-security InRelease
+Obj:3 http://deb.debian.org/debian bullseye-updates InRelease      
+Err:4 https://cli.github.com/packages stable InRelease             
+  Certificate verification failed: The certificate is NOT trusted. The certificate issuer is unknown.  Could not handshake: Error in the certificate verification. [IP: 185.199.110.153 443]
+Obj:5 http://archive.raspberrypi.org/debian bullseye InRelease
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias... Hecho
+Leyendo la información de estado... Hecho
+Se puede actualizar 1 paquete. Ejecute «apt list --upgradable» para verlo.
+W: https://cli.github.com/packages/dists/stable/InRelease: No system certificates available. Try installing ca-certificates.
+W: Fallo al obtener https://cli.github.com/packages/dists/stable/InRelease  Certificate verification failed: The certificate is NOT trusted. The certificate issuer is unknown.  Could not handshake: Error in the certificate verification. [IP: 185.199.110.153 443]
+W: No se han podido descargar algunos archivos de índice, se han omitido, o se han utilizado unos antiguos en su lugar.
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias... Hecho
+Leyendo la información de estado... Hecho
+Calculando la actualización... Hecho
+El paquete indicado a continuación se instaló de forma automática y ya no es necesario.
+  vim-runtime
+Utilice «sudo apt autoremove» para eliminarlo.
+Los siguientes paquetes se han retenido:
+  linux-image-amd64:amd64
+0 actualizados, 0 nuevos se instalarán, 0 para eliminar y 1 no actualizados.
+
+```
+
+### Eliminacion de Archivos Temporales y Cache
+
+```bash
+Eliminando archivos innecesarios y caché...
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias... Hecho
+Leyendo la información de estado... Hecho
+Los siguientes paquetes se ELIMINARÁN:
+  vim-runtime
+0 actualizados, 0 nuevos se instalarán, 1 para eliminar y 1 no actualizados.
+Se liberarán 32,9 MB después de esta operación.
+(Leyendo la base de datos ... 186970 ficheros o directorios instalados actualmente.)
+Desinstalando vim-runtime (2:8.2.2434-3+deb11u1) ...
+Eliminando `desviación de /usr/share/vim/vim82/doc/help.txt a /usr/share/vim/vim82/doc/help.txt.vim-tiny por vim-runtime'
+Eliminando `desviación de /usr/share/vim/vim82/doc/tags a /usr/share/vim/vim82/doc/tags.vim-tiny por vim-runtime'
+Procesando disparadores para man-db (2.9.4-2) ...
+Archivos y caché eliminados correctamente.
+```
 
 ## Contribuciones
 
