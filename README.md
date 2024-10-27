@@ -52,6 +52,15 @@ El script ofrece un menú interactivo que incluye las siguientes opciones:
 
 ## Ejemplo
 
+### Respaldo de un Directorio
+
+```bash
+DirectorioPrueba README.md script.sh
+Que directorio desea respaldar? DirectorioPrueba
+  adding: DirectorioPrueba/ (stored 0%)
+Respaldo creado en 'respaldos' con el nombre de DirectorioPrueba.zip
+```
+
 ### Generacion de Infome
 ```bash
  --- INFORME --- 
