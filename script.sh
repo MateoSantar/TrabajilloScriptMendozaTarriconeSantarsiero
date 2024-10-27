@@ -91,6 +91,7 @@ case $opcion in
 	echo "Opcion no valida"
 	;;
 esac
-echo ""
+read
+clear
 done
 
