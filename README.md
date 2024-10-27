@@ -74,6 +74,30 @@ El script ofrece un menú interactivo que incluye las siguientes opciones:
 > tmpfs            5,0M   4,0K  5,0M   1% /run/lock
 > tmpfs            199M    28K  199M   1% /run/user/1000
 
+
+### Creacion de Usuario
+```bash
+Ingrese el nombre del nuevo usuario: usuario
+Añadiendo el usuario `usuario' ...
+Añadiendo el nuevo grupo `usuario' (1001) ...
+Añadiendo el nuevo usuario `usuario' (1001) con grupo `usuario' ...
+Creando el directorio personal `/home/usuario' ...
+Copiando los ficheros desde `/etc/skel' ...
+Nueva contraseña: 
+Vuelva a escribir la nueva contraseña: 
+passwd: contraseña actualizada correctamente
+Cambiando la información de usuario para usuario
+Introduzca el nuevo valor, o pulse INTRO para usar el valor predeterminado
+	Nombre completo []: 	
+	Número de habitación []: 
+	Teléfono del trabajo []: 
+	Teléfono de casa []: 
+	Otro []: 
+¿Es correcta la información? [S/n] s
+usuario:x:1001:1001:,,,:/home/usuario:/bin/bash
+```
+
+
 ## Contribuciones
 
 ¡Las contribuciones son bienvenidas! Aquí tienes algunas pautas para colaborar en este script:
