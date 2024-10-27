@@ -2,7 +2,7 @@
 #!/bin/bash
 
 opcion1(){
-	echo $(ls)
+	echo $(ls -d */)
 	read -p "Que directorio desea respaldar? " direct
 	ruta=$PWD/$direct
 	if [ -d "$ruta" ]; then
