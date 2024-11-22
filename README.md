@@ -86,24 +86,27 @@ Respaldo creado en 'respaldos' con el nombre de DirectorioPrueba.zip
 
 ### Creacion de Usuario
 ```bash
-Ingrese el nombre del nuevo usuario: usuario
-Añadiendo el usuario `usuario' ...
-Añadiendo el nuevo grupo `usuario' (1001) ...
-Añadiendo el nuevo usuario `usuario' (1001) con grupo `usuario' ...
-Creando el directorio personal `/home/usuario' ...
+Ingrese el nombre del nuevo usuario:
+new_user
+Añadiendo el usuario `new_user' ...
+Añadiendo el nuevo grupo `new_user' (1003) ...
+Añadiendo el nuevo usuario `new_user' (1003) con grupo `new_user' ...
+Creando el directorio personal `/home/new_user' ...
 Copiando los ficheros desde `/etc/skel' ...
 Nueva contraseña: 
 Vuelva a escribir la nueva contraseña: 
 passwd: contraseña actualizada correctamente
-Cambiando la información de usuario para usuario
+Cambiando la información de usuario para new_user
 Introduzca el nuevo valor, o pulse INTRO para usar el valor predeterminado
-	Nombre completo []: 	
+	Nombre completo []: 
 	Número de habitación []: 
 	Teléfono del trabajo []: 
 	Teléfono de casa []: 
 	Otro []: 
-¿Es correcta la información? [S/n] s
-usuario:x:1001:1001:,,,:/home/usuario:/bin/bash
+¿Es correcta la información? [S/n] S
+El usuario 'new_user' se creó exitosamente.
+¿Desea añadir grupos al usuario? (s/n):
+n
 ```
 
 ### Actualizacion de Sistema
