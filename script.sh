@@ -16,7 +16,7 @@ opcion1(){
 
 		if [ -e "respaldos/$direct.zip" ];then
 			rm respaldos/$direct.zip
-			echo "Respaldo antiguo encontrado y eliminado!"
+			echo -e "${RED}Respaldo antiguo encontrado y eliminado!${ENDCOLOR}"
 		fi
 		zip -r $direct.zip $direct/
 		mv $direct.zip respaldos/
