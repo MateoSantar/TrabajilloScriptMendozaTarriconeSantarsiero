@@ -1,6 +1,10 @@
 
 #!/bin/bash
 
+RED='\e[1;31m'
+GREEN='\e[1;32m'
+CYAN='\e[1;36m'
+ENDCOLOR='\e[0m'
 opcion1(){
 	echo $(ls)
 	read -p "Que directorio desea respaldar? " direct
@@ -13,23 +17,24 @@ opcion1(){
 		if [ -e "respaldos/$direct.zip" ];then
 			rm respaldos/$direct.zip
 			echo "Respaldo antiguo encontrado y eliminado!"
-		fi 
+		fi
 		zip -r $direct.zip $direct/
 		mv $direct.zip respaldos/
-		echo "Respaldo creado en 'respaldos' con el nombre de $direct.zip"
+		echo -e "Respaldo creado en ${GREEN}'respaldos'${ENDCOLOR} con el nombre de ${CYAN}$direct.zip${ENDCOLOR}"
 
 	elif [ -e "$ruta" ]; then
-		echo "$ruta es un archivo."
+		echo -e "${RED}$ruta es un archivo.${ENDCOLOR}"
 	else
-		echo "No existe $direct"
+		echo -e "${RED}No existe $direct${ENDCOLOR}"
 	fi
 }
 opcion2(){
 	{
 	echo " --- INFORME --- "
-	echo "Fecha y Hora actual: $(date '+%F %T')"
+	echo -e "Fecha y Hora actual:$(date '+%F %T')"
 	echo ""
-	echo "Uso de CPU:"
+	echo "Uso de CPU"
+	echo ""
 	top -bn1 | grep "Cpu(s)"
 	echo ""
 	echo "Uso de Memoria:"
@@ -39,33 +44,34 @@ opcion2(){
 	echo "Uso de Disco:"
 	df -h
 	} > reporte.log
-	echo "Reporte creado en 'reporte.log'"
+	echo -e "Reporte creado en ${GREEN}'reporte.log'${ENDCOLOR}"
 }
 opcion3(){
-	read -p "Ingrese el nombre del nuevo usuario: " nombre_usuario
+	echo -e "Ingrese el nombre del ${GREEN}nuevo usuario${ENDCOLOR}:"
+	read nombre_usuario
 	sudo adduser $nombre_usuario
 	cat /etc/passwd | grep $nombre_usuario
 }	
 opcion4(){
-echo "Actualizando el Sistema..."
+echo -e "${CYAN}Actualizando el Sistema${ENDCOLOR}..."
 sudo apt update && sudo apt upgrade -y
-echo "Sistema actualizado corrextamente."
+echo -e "${CYAN}Sistema actualizado corrextamente.${ENDCOLOR}"
 }
 opcion5(){
-echo "Eliminando archivos innecesarios y caché..."
+echo -e "${CYAN}Eliminando archivos innecesarios y caché${ENDCOLOR}..."
 sudo apt autoremove -y
 sudo apt clean
 sudo rm -rf /tmp/*
-echo "Archivos y caché eliminados correctamente."
+echo -e "${CYAN}Archivos y caché eliminados correctamente.${ENDCOLOR}"
 }
 
 while true;do
-echo "1) Respaldo de un directorio"
-echo "2) Generacion de un informe de especificaciones"
-echo "3) Crear un usuario"
-echo "4) Actualizar sistema"
-echo "5) Eliminacion de archivos y cache"
-echo "0) Salir"
+echo -e "${GREEN}1)${CYAN}Respaldo de un directorio${ENDCOLOR}"
+echo -e "${GREEN}2)${CYAN}Generacion de un informe de especificaciones${ENDCOLOR}"
+echo -e "${GREEN}3)${CYAN}Crear un usuario${ENDCOLOR}"
+echo -e "${GREEN}4)${CYAN}Actualizar sistema${ENDCOLOR}"
+echo -e "${GREEN}5)${CYAN}Eliminacion de archivos y cache${ENDCOLOR}"
+echo -e "${GREEN}0)${RED}Salir${ENDCOLOR}"
 read -p "Elige una opcion: " opcion
 
 case $opcion in
@@ -88,7 +94,7 @@ case $opcion in
 	break
 	;;
 	*)
-	echo "Opcion no valida"
+	echo -e "${RED}Opcion no valida${ENDCOLOR}"
 	;;
 esac
 read
