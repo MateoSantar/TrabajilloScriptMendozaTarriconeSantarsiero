@@ -47,11 +47,50 @@ opcion2(){
 	echo -e "Reporte creado en ${GREEN}'reporte.log'${ENDCOLOR}"
 }
 opcion3(){
-	echo -e "Ingrese el nombre del ${GREEN}nuevo usuario${ENDCOLOR}:"
-	read nombre_usuario
-	sudo adduser $nombre_usuario
-	cat /etc/passwd | grep $nombre_usuario
-}	
+    echo -e "Ingrese el nombre del ${GREEN}nuevo usuario${ENDCOLOR}:"
+    read nombre_usuario
+
+    # Verificar si el usuario ya existe
+    if id "$nombre_usuario" &>/dev/null; then
+        echo -e "${RED}El usuario '$nombre_usuario' ya existe.${ENDCOLOR}"
+        return 1
+    fi
+
+    # Crear el usuario
+    sudo adduser "$nombre_usuario"
+
+    # Confirmar que se creó correctamente
+    if id "$nombre_usuario" &>/dev/null; then
+        echo -e "${GREEN}El usuario '$nombre_usuario' se creó exitosamente.${ENDCOLOR}"
+
+        # Preguntar si desea agregar al usuario a grupos adicionales
+        echo -e "¿Desea añadir grupos al usuario? (${CYAN}s/n${ENDCOLOR}):"
+        read agregar_grupos
+
+        if [[ "$agregar_grupos" == "s" || "$agregar_grupos" == "S" ]]; then
+            echo -e "Ingrese los nombres de los grupos separados por comas:"
+            read grupos
+
+            IFS=',' read -r -a grupos_array <<< "$grupos"
+
+            for grupo in "${grupos_array[@]}"; do
+                # Verificar si el grupo existe y crearlo si no
+                if ! getent group "$grupo" &>/dev/null; then
+                    echo -e "${CYAN}El grupo '$grupo' no existe. Creándolo...${ENDCOLOR}"
+                    sudo groupadd "$grupo"
+                fi
+
+                # Añadir al usuario al grupo
+                sudo usermod -aG "$grupo" "$nombre_usuario"
+                echo -e "${GREEN}Añadido al grupo '$grupo'.${ENDCOLOR}"
+            done
+        fi
+
+    else
+        echo -e "${RED}Hubo un error al crear el usuario '$nombre_usuario'.${ENDCOLOR}"
+    fi
+}
+
 opcion4(){
 echo -e "${CYAN}Actualizando el Sistema${ENDCOLOR}..."
 sudo apt update && sudo apt upgrade -y
