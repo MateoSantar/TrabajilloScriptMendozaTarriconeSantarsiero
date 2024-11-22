@@ -25,7 +25,7 @@ El script ofrece un menú interactivo que incluye las siguientes opciones:
    - **Salida**: El informe se guarda en un archivo llamado `reporte.log`.
 
 ### 3. **Crear un usuario**
-   - **Descripción**: Solicita el nombre de un nuevo usuario y lo crea en el sistema utilizando el comando `adduser`. Luego, se verifica la creación del usuario mostrando los detalles en el archivo `/etc/passwd`.
+   - **Descripción**: Solicita el nombre de un nuevo usuario y se verifica si ya existe, en caso negativo, se agrega mediante `adduser` y se imprime si se ha creado exitosamente, además permite la asignación del usuario a grupos adicionales (existan o no).
 
 ### 4. **Actualizar sistema**
    - **Descripción**: Actualiza el sistema operativo utilizando los comandos `sudo apt update` y `sudo apt upgrade`. Esta opción descarga las últimas actualizaciones y las aplica sin intervención del usuario.
