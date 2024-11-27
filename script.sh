@@ -98,6 +98,16 @@ sudo rm -rf /tmp/*
 echo -e "${CYAN}Archivos y caché eliminados correctamente.${ENDCOLOR}"
 }
 
+echo ""
+echo ""
+echo "██████╗ ██╗███████╗███╗   ██╗██╗   ██╗███████╗███╗   ██╗██╗██████╗  ██████╗ "
+echo "██╔══██╗██║██╔════╝████╗  ██║██║   ██║██╔════╝████╗  ██║██║██╔══██╗██╔═══██╗"
+echo "██████╔╝██║█████╗  ██╔██╗ ██║██║   ██║█████╗  ██╔██╗ ██║██║██║  ██║██║   ██║"
+echo "██╔══██╗██║██╔══╝  ██║╚██╗██║╚██╗ ██╔╝██╔══╝  ██║╚██╗██║██║██║  ██║██║   ██║"
+echo "██████╔╝██║███████╗██║ ╚████║ ╚████╔╝ ███████╗██║ ╚████║██║██████╔╝╚██████╔╝"
+echo "╚═════╝ ╚═╝╚══════╝╚═╝  ╚═══╝  ╚═══╝  ╚══════╝╚═╝  ╚═══╝╚═╝╚═════╝  ╚═════╝ "
+echo ""                                                                           
+
 while true;do
 echo -e "${GREEN}1)${CYAN}Respaldo de un directorio${ENDCOLOR}"
 echo -e "${GREEN}2)${CYAN}Generacion de un informe de especificaciones${ENDCOLOR}"
